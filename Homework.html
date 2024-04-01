@@ -1,0 +1,187 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework</title>
+    <div id="container">
+        <style>
+            body {
+                background-color: rgb(192, 224, 252);
+            }
+
+            .container {
+                height: 100px;
+                position: relative;
+                border: 3px solid tomato;
+                border-bottom-width: 15px;
+                border-radius: 10px;
+                border-left-width: 10px;
+                border-right-width: 5px;
+                box-sizing: border-box;
+
+            }
+
+            .center {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%);
+                transform: translate(-50%, -50%);
+
+            }
+
+            ::placeholder {
+                color: #000000;
+                opacity: 0.5;
+
+            }
+
+            .form {
+                font-family: serif;
+                text-align: center;
+            }
+        </style>
+    </div>
+    <style>
+        <div id="field-holder">
+            .field-holder {
+            position: relative;
+            margin-bottom: 1.25em;
+
+        }
+
+        input {
+            border: 0;
+            border-bottom: 3px solid #dfdfdf;
+            outline: none;
+        }
+
+        label {
+            position: relative
+            top: 0;
+            left: 0;
+            font-size: 1em;
+            color: #424242;
+            display: flex;
+            align-items: center;
+            cursor: text;
+            transition: .3s ease-in-out
+        }
+
+        input,
+        label {
+            font-size: 1em;
+            width: 100%;
+            height: 55px;
+
+        }
+
+        input:focus+label,
+        input:valid+label {
+            color: #424242;
+            font-size: .75em;
+            top: -25px;
+            pointer-events: none;
+
+        }
+
+        input:focus+label,
+        input:valid {
+            border-bottom: 3px solid #424242
+        }
+
+        </div></head></>
+    </style>
+
+</head>
+
+<body style="font-family: initial;">
+    <div id="website text">
+        <h1
+            style="color: rgb(255, 125, 125);background-color: rgb(255, 255, 255);font-size: xx-large;font-family: Arial, Helvetica, sans-serif;text-align: center;border:tomato solid 2px; border-bottom-width:10px;border-radius: 15px;margin: 50px; ">
+            <strong>THIS IS A WEBSITE!!!</strong>
+        </h1>
+    </div>
+
+    <p
+        style="color:brown;font-size: x-large;font-family: fantasy;text-align: center;border: #f44336 solid; background-color: aliceblue;border-bottom-width: 10px;border-radius: 5px;font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;margin: 50px;">
+        פארגרף מטורף</b></p>
+    <div class="container">
+        <div class="center">
+            <style>
+                a:link,
+                a:visited {
+                    background-color: #f44336;
+                    color: white;
+                    padding: 15px 25px;
+                    text-align: center;
+                    font-family: monospace;
+                    outline: black;
+                    text-decoration: none;
+                    display: inline-block;
+
+                }
+
+                a:hover,
+                a:active {
+                    background-color: red;
+                }
+            </style>
+            <a href="blank.html" target="_self">A nice looking button</a><br>
+        </div>
+    </div>
+    </div>
+    </a><br>
+        <div class="center">
+            <div class="form">
+                <form action="server.com" method="get" 
+                style="text-align: center;position: relative;top: 100px;
+         border: tomato 5px solid; width:  500px;; height: fit-content ; 
+         border-bottom-width: 25px;border-radius: 15px;margin: 300px; ">
+<div class="field-holder">
+                    <label for="fullname">Full name:</label><br>
+                    <input type="text" input name="fullname" placeholder="Your name" required><br>
+                    <div class="field-holder">
+                    <label for="email">Email:</label><br>
+                    <input type="email" autocomplete="off" required><br>
+                    <label for="Address">Address:</label required><br>
+                    <input type="text" id="Address" name="Address" required><Br>
+                    <label for="Age">Age:</label><br>
+                    <input type="number" id="Age" name="age" min="0" max="99 required"><br>
+                    <label for="family">Choose your family status:</label><br>
+                    <select id="family" name="familystatus" required><br>
+                        <option value="Married">Married</option><br>
+                        <option value="Single">Single</option><br>
+                        <option value="Divorced">Divorced</option>
+                    </select><br>
+                    <label for="kid amount">How many children have you got?</label><br>
+                    <input type="range" id="kid amount" name="kid amount" min="0" max="30"
+                        oninput="this.nextElementSibling.value = this.value"><output>24</output><br>
+                    <label for="birthdate">When were you born?</label><br>
+                    <input type="date" input name="birthdate" required><br>
+                    <label for="gender">What is your gender?</label><br>
+                    <input list="gender" name="gender" size="15"><br>
+                    <datalist id="gender">
+                        <option value="Male"></option>
+                        <option value="Female"></option>
+                        <option value="Other"></option>
+                        <option value="Prefer not to say"></option>
+                    </datalist>
+                    <label for="color">favorite color:</label><br>
+                    <input type="color" input name="color" style="width: 200px"><br>
+
+
+                    <input type="submit">
+
+
+
+
+                    <button type="button" onclick="alert('MEOW!')">Click Me!</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
