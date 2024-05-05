@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="display"></div>
+    Name: <input id="cName">
+    Generation:<input id="cGen">
+    Image:<input id="cImg">
+    <button onclick="SaveData()">SAVE</button>
+    <button onclick="loadData()">LOAD</button>
+    <button onclick="AddCars()">ADD A CAR</button>
+
+    <script>
+        let cars =
+            [
+                {
+                    "name": "Toyota",
+                    "generation": 2010,
+                    "img": "https://cdn.pixabay.com/photo/2018/05/18/16/29/car-3417670_960_720.jpg"
+                },
+                {
+                    "name": "Honda",
+                    "generation": 2013,
+                    "img": "https://cdn.pixabay.com/photo/2015/09/02/12/25/bmw-918408_960_720.jpg"
+                },
+                {
+                    "name": "Ford",
+                    "generation": 2015,
+                    "img": "https://cdn.pixabay.com/photo/2017/03/20/00/34/audi-2158289_960_720.jpg"
+                },
+                {
+                    "name": "Chevrolet",
+                    "generation": 2018,
+                    "img": "https://cdn.pixabay.com/photo/2016/11/29/08/18/car-1868159_960_720.jpg"
+                }
+            ]
+        //load
+        function loadData() {
+            cars = JSON.parse(localStorage.getItem("cars")) //deserialization
+            displayData()
+        }
+        //save
+        function SaveData() {
+            localStorage.setItem("cars", JSON.stringify(cars)) //serialization
+        }
+        //CREATE
+        function AddCars() {
+            cars.push({ "name": cName.value, generation: cGen.value, img: 'https://cdn.pixabay.com/photo/2016/11/29/08/18/car-1868159_960_720.jpg' })
+            displayData()
+        }
+        function DeleteCar(ind) {
+            console.log("kill", ind)
+            cars.splice(ind, 1);
+displayData()
+        }
+        //read
+        function displayData() {
+            let temp = "<ol>"
+            for (let index = 0; index < cars.length; index++) {
+                temp += `<li> ${cars[index].name} , ${cars[index].generation}, <img src =${cars[index].img}> <button onclick="DeleteCar(${index})">delete</button>`
+
+            }
+            display.innerHTML = temp
+        }
+        displayData()
+
+    </script>
+</body>
+
+</html>
